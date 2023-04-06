@@ -2,13 +2,16 @@
   "name": "node_test_ap",
   "version": "1.0.0",
   "description": "Node.js app on Docker",
-  "author": "Menon Rudhin <mr@gmail.com>",
+  "author": "Menon Rudhin <menonrudhin@gmail.com>",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon" : "^2.0.22"
   }
 }
 
