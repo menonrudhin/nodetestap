@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 // Middleware 3
 app.use((req, res, next) => {
 	console.log('Red / Blue Pill ?');
-	next();
+	res.send('<h1>Neo is the Messiah!</h1>');
 });
 
 const server = http.createServer(app);
