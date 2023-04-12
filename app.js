@@ -5,21 +5,20 @@ const express = require('express');
 const app = express();
 
 // Middleware 1
-app.use((req, res, next) => {
-	console.log('Follow the white rabbit !');
-	next(); // allows the next middleware to be executed
+app.use('/', (req, res, next) => {
+	console.log('/ always run middleware');
+	next(); // call the next middleware which matches the url requested
 });
 
 // Middleware 2
-app.use((req, res, next) => {
-	console.log('Run Neo...');
-	next();
+app.use('/users',(req, res, next) => {
+	console.log('/users middleware');
+	res.send('<h1>User list here</h1>');
 });
 
-// Middleware 3
-app.use((req, res, next) => {
-	console.log('Red / Blue Pill ?');
-	res.send('<h1>Neo is the Messiah!</h1>');
+app.use('/', (req, res, next) => {
+	console.log('/ middleware');
+	res.send('<h1>Root Page</h1>');
 });
 
 const server = http.createServer(app);
