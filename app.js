@@ -4,9 +4,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:false})); // works only with "use"
 
-app.use('/create-user', (req, res, next) => {
+app.get('/create-user', (req, res, next) => {
 	console.log('/create-user middleware');
 	res.send('<form action="/users" method="POST" ><input type="text" name="username"><button type="submit">Create</button></input></form>');
 });
@@ -18,7 +18,7 @@ app.post('/users',(req, res, next) => {
 	res.send('<h1>User Created : ' + userName + '</h1>');
 });
 
-app.use('/', (req, res, next) => {
+app.get('/', (req, res, next) => {
 	console.log('/ middleware');
 	res.send('<h1>Root Page</h1>');
 });
