@@ -8,14 +8,14 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/create-user', (req, res, next) => {
 	console.log('/create-user middleware');
-	res.send('<form action="/users" method="POST" ><input type="text" name="title"><button type="submit">Create</button></input></form>');
+	res.send('<form action="/users" method="POST" ><input type="text" name="username"><button type="submit">Create</button></input></form>');
 });
 
-app.use('/users',(req, res, next) => {
+app.post('/users',(req, res, next) => {
 	console.log('/users middleware');
-	const userName = req.body;
+	const userName = req.body.username;
 	console.log(userName);
-	res.send('<h1>' + userName.toString() + '</h1>');
+	res.send('<h1>User Created : ' + userName + '</h1>');
 });
 
 app.use('/', (req, res, next) => {
