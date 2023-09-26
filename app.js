@@ -2,13 +2,13 @@ const http = require('http');
 const express = require('express');
 
 const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+const shopRoutes = require('./routes/notes');
 
 const app = express();
 
 app.get('/', (req, res, next) => {
 	console.log('/ middleware');
-	res.send('<h1>Root Page</h1>');
+	res.send('<h1>Welcome to Q-Notes</h1>');
 });
 
 app.use(shopRoutes); // order matters if both have common routes
