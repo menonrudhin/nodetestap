@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Notes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Notes</a></li>
+                <li><a href="/create-notes">Create Notes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/create-notes" method="POST">
+            <input type="text" name="notes"/>
+            <input type="submit">Submit</input>
+        </form>
+    </main>
+</body>
+</html>
