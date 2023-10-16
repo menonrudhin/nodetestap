@@ -1,17 +1,18 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const rootDir = require('../util/path');
 
 const router = express.Router();
 router.use(bodyParser.urlencoded({extended:false})); // works only with "use"
 
 router.get('/notes', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'notes.html'));
+    res.sendFile(path.join(rootDir, 'views', 'notes.html'));
 });
 
 router.get('/create-notes', (req, res, next) => {
 	console.log('/create-notes middleware');
-    res.sendFile(path.join(__dirname, '../', 'views', 'add-notes.html'));
+    res.sendFile(path.join(rootDir, 'nodetestap' , 'views', 'add-notes.html'));
 	//res.send('<form action="/view-note" method="POST" ><input type="text" name="username"><button type="submit">Create</button></input></form>');
 });
 
