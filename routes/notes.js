@@ -12,7 +12,7 @@ router.get('/notes', (req, res, next) => {
 
 router.get('/create-notes', (req, res, next) => {
 	console.log('/create-notes middleware');
-    res.sendFile(path.join(rootDir, 'nodetestap' , 'views', 'add-notes.html'));
+    res.sendFile(path.join(rootDir, 'views', 'add-notes.html'));
 	//res.send('<form action="/view-note" method="POST" ><input type="text" name="username"><button type="submit">Create</button></input></form>');
 });
 
