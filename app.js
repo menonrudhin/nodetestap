@@ -9,7 +9,7 @@ const app = express();
 
 app.get('/', (req, res, next) => {
 	console.log('/ middleware');
-	res.send('<h1>Welcome to Q-Notes <i>v0.2</i></h1>');
+	res.send('<h1>Welcome to Q-Notes <i>v0.4</i></h1>');
 });
 
 app.use(shopRoutes); // order matters if both have common routes
