@@ -4,16 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q-Notes</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Notes</a></li>
-                <li><a href="/create-notes">Create Notes</a></li>
-            </ul>
-        </nav>
-    </header>
+        <style>
+            .body {
+                padding: 0;
+                margin: 0;
+                font-family: sans-serif;
+            }
+    
+            .main {
+                padding: 1rem;
+            }
+    
+            .nav_header {
+                width: "100%";
+                height: 3.5rem;
+                background-color: blueviolet;
+                padding: 0 1.5rem;
+            }
+    
+            .nav_bar {
+                display: flex;
+                height: "100%";
+            }
+    
+            .nav_bar_item_list {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .nav_bar_item {
+                margin: 1rem;
+                padding: 0;
+            }
+    
+            .nav_bar_item a {
+                text-decoration: none;
+                color: blanchedalmond;
+            }
+            
+            .nav_bar_item a:hover,
+            .nav_bar_item a:active {
+                color: burlywood;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <header class="nav_header">
+            <nav class="nav_bar">
+                <ul class="nav_bar_item_list">
+                    <li class="nav_bar_item"><a href="/">Notes</a></li>
+                    <li class="nav_bar_item"><a href="/create-notes">Create Notes</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <h1>My Notes</h1>
         <p>List all the notes here ...</p>
