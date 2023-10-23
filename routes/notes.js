@@ -18,9 +18,10 @@ router.get('/create-notes', (req, res, next) => {
 
 router.post('/view-note',(req, res, next) => {
 	console.log('/view-note middleware');
-	const notes = req.body.notes;
-	console.log(notes);
-	res.send('<h1>Note Created : ' + notes + '</h1>');
+	const note_title = req.body.note_title;
+	const note_text = req.body.note_text;
+	console.log(note_title + ' ' + note_text);
+	res.send('<h1>Note Created : ' + note_title + '</h1>');
 });
 
 module.exports = router;

@@ -48,6 +48,43 @@
         .nav_bar_item a:active {
             color: burlywood;
         }
+
+        .note-form-control label,
+        .note-form-control input,
+        .note-form-control textarea {
+            display: block;
+        }
+
+        .note-form-control input {
+            border: 1px solid #9b3df4;
+        }
+
+        .title-div {
+            display: flex;
+            align-items: center;
+        }
+
+        .title-div input {
+            /* T R B L */
+            margin: 0 0 3px 3px;
+        }
+
+        .note-form {
+            width: 30rem;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .submit-button {
+            background-color: #9b3df4;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: white;
+            color: #9b3df4;
+        }
+
     </style>
 </head>
 <body class="body">
@@ -60,9 +97,14 @@
         </nav>
     </header>
     <main class="main">
-        <form action="/view-note" method="POST">
-            <textarea name="notes" rows="10" cols="50">Enter your notes here and click submit.</textarea>
-            <button type="submit">Submit</button>
+        <form class="note-form" action="/view-note" method="POST">
+            <div class="note-form-control">
+                <div class="title-div">
+                    <label>Title</label><input class="note-title" name="note_title" />
+                </div>
+                <textarea class="note-text" name="note_text" rows="10" cols="50">Enter your notes here and click submit.</textarea>
+                <button class="submit-button" type="submit">Submit</button>
+            </div>
         </form>
     </main>
 </body>
