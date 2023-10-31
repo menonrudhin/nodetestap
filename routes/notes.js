@@ -21,7 +21,7 @@ router.post('/view-note',(req, res, next) => {
 	const note_title = req.body.note_title;
 	const note_text = req.body.note_text;
 	console.log(note_title + ' ' + note_text);
-	res.send('<h1>Note Created : ' + note_title + '</h1>');
+	res.send('<h1>Note Created : ' + note_title + '</h1></br><h4>' + note_text + '</h4>');
 });
 
 module.exports = router;
