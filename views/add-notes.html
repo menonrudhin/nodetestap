@@ -62,11 +62,16 @@
         .title-div {
             display: flex;
             align-items: center;
+            font: inherit;
         }
 
         .title-div input {
             /* T R B L */
             margin: 0 0 3px 3px;
+        }
+
+        .title-label {
+            font-family: sans-serif;
         }
 
         .note-form {
@@ -75,14 +80,21 @@
             margin: auto;
         }
 
+        .note-text {
+            font-family: sans-serif;
+        }
+
         .submit-button {
-            background-color: #9b3df4;
-            color: white;
+            font: inherit;
+            border: 1px solid #9b3df4;
+            background-color: white;
+            border-radius: 3px;
+            color: #9b3df4;
         }
 
         .submit-button:hover {
-            background-color: white;
-            color: #9b3df4;
+            background-color: #9b3df4;
+            color: white;
         }
 
     </style>
@@ -100,7 +112,7 @@
         <form class="note-form" action="/view-note" method="POST">
             <div class="note-form-control">
                 <div class="title-div">
-                    <label>Title</label><input class="note-title" name="note_title" />
+                    <label class="title-label">Title</label><input class="note-title" name="note_title" />
                 </div>
                 <textarea class="note-text" name="note_text" rows="10" cols="50">Enter your notes here and click submit.</textarea>
                 <button class="submit-button" type="submit">Submit</button>
