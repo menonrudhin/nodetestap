@@ -7,6 +7,8 @@ const noteRoutes = require('./routes/notes');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res, next) => {
 	console.log('/ middleware');
 	res.sendFile(path.join(__dirname, 'views', 'home.html'));
