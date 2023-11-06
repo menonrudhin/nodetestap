@@ -15,7 +15,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.use(noteRoutes); // order matters if both have common routes
-app.use('/admin', adminRoutes);
+app.use('/admin', adminRoutes.routes);
 app.use((req, res, next) => {
 	res.status(404).sendFile(path.join(__dirname, 'views', 'pg-not-found.html'));
 });
